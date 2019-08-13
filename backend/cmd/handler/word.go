@@ -1,5 +1,9 @@
 package handler
 
-func GetWord(id int) string {
-	return `{text:"สวัสดีชาวโลก"}`
+import (
+	"github.com/gin-gonic/gin"
+)
+
+func GetWordHandler(context *gin.Context) {
+	context.String(200, `{text:"สวัสดีชาวโลก"}`)
 }
